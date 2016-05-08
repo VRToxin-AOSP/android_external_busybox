@@ -7275,7 +7275,7 @@ static NOINLINE int run_pipe(struct pipe *pi)
 		argv_expanded = NULL;
 		if (command->pid < 0) { /* [v]fork failed */
 			/* Clearly indicate, was it fork or vfork */
-			bb_perror_msg(BB_MMU ? "vfork"+1 : "vfork");
+			bb_perror_msg(BB_MMU ? "fork" : "vfork");
 		} else {
 			pi->alive_cmds++;
 #if ENABLE_HUSH_JOB
